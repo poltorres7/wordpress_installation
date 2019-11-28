@@ -14,7 +14,7 @@ systemctl enable firewalld
 
 mysql_secure_installation
 mysql -u root -p
-tp://wordpress.org/latest.tar.gz
+wget http://wordpress.org/latest.tar.gz
 
 
 firewall-cmd --permanent --zone=public --add-service=http
