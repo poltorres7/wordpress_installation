@@ -1,6 +1,7 @@
 Instalation process wordpress
 ===============
 
+```bash
 dnf update -y
 sudo yum install httpd mariadb mariadb-server php php-json php-common php-mysqlnd php-gd php-xml php-mbstring php-mcrypt php-xmlrpc unzip firewalld wget -y
 systemctl start httpd
@@ -32,3 +33,4 @@ systemctl restart httpd
 vim wp-config.php 
 
 systemctl restart httpd
+```
