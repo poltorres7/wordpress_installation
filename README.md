@@ -1,36 +1,31 @@
-Instalation process wordpress
-===============
+Wordress administration guide
+=========
 
-```bash
-dnf update -y
-sudo yum install httpd mariadb mariadb-server php php-json php-common php-mysqlnd php-gd php-xml php-mbstring php-mcrypt php-xmlrpc unzip firewalld wget -y
-systemctl start httpd
-systemctl start mariadb
-systemctl start firewalld
+Hello friend! you can find in this documentation a guide to help you in the administration of a wordpress site.
 
-systemctl enable httpd
-systemctl enable mariadb
-systemctl enable firewalld
+Contents
+--------
+- Installation [Install Wordpress](installWordpress.md)
+- Backup process [Backup Wordpress Site](backupWordpressSite.md)
+- Restore process [Restore Wordpress Site](restoreWordpressSite.md)
+- Multiple sites in one host (Apache <VirtualHost>)[]()
 
-mysql_secure_installation
-mysql -u root -p
-wget http://wordpress.org/latest.tar.gz
+Skills Requirements
+--------
+In order to follow this tutorials this are some of the expected skills:
+- Basic administrator skills
+    - Terminal usage and principal commands knowledge `cd, tar, ls, chmod, chown, cp, mv, yum|apt, systemctl`
+- Basic database skills
+    - Create databases, make consults, etc.
 
+The tech stack
+-------
+This tutorials are made with the LAMP stack
+- Linux OS
+- Apache2
+- MariaDB
+- PHP
 
-firewall-cmd --permanent --zone=public --add-service=http
-firewall-cmd --permanent --zone=public --add-service=https
-firewall-cmd --reload
-
-tar -xzvf latest.tar.gz
-ll
-rsync -avP ~/wordpress/ /var/www/html/
-ll /var/www/html/
-mkdir /var/www/html/wp-content/uploads
-chown -R apache:apache /var/www/html/*
-
-cd /var/www/html
-systemctl restart httpd
-vim wp-config.php 
-
-systemctl restart httpd
-```
+Collaboration
+--------
+**Feel free to make a PR**

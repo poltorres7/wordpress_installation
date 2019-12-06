@@ -1,0 +1,105 @@
+    1  ll
+    2  ll /var/www/html/
+    3  mkdir mxintech.com
+    4  mv wp-* mxintech.com/
+    5  mv wp* mxintech.com/
+    6  ll
+    7  rm -rf mxintech.com/
+    8  cd /var/www/html/
+    9  ll
+   10  mkdir mxintech.com
+   11  mv wp-* mxintech.com/
+   12  ll
+   13  mv index.php mxintech.com/
+   14  mv license.txt mxintech.com/
+   15  mv readme.html mxintech.com/
+   16  mv xmlrpc.php mxintech.com/
+   17  ll
+   18  cd /etc/httpd/
+   19  ll
+   20  ll conf
+   21  vim conf/httpd.conf 
+   22  ll
+   23  cd conf.d/
+   24  ll
+   25  mysqldump
+   26  man mysqldump
+   27  ll
+   28  cd ..
+   29  cd httpd/
+   30  ll
+   31  cd conf.d/
+   32  ll
+   33  cp welcome.conf mxintech.conf
+   34  vim mxintech.conf 
+   35  systemctl restart httpd
+   36  ll
+   37  rm -rf mxintech.conf 
+   38  cd ..
+   39  ll
+   40  cd conf/
+   41  ll
+   42  vim httpd.conf 
+   43  systemctl restart httpd
+   44  ip a
+   45  ll
+   46  vim httpd.conf 
+   47  systemctl restart httpd
+   48  cd /var/www/html/
+   49  ll
+   50  cd
+   51  ll
+   52  rsync -avP ~/wordpress/ /var/www/html/sitio2.com
+   53  ll /var/www/html/
+   54  cd /var/www/html/
+   55  ll
+   56  ll mxintech.com/
+   57  chown apache:apache mxintech.com/
+   58  ll
+   59  chown -R apache:apache sitio2.com/
+   60  ll
+   61  #mkdir /var/www/html/wp-content/uploads
+   62  mkdir /var/www/html/sitio2.com/wp-content/uploads
+   63  chown -R apache:apache sitio2.com/
+   64  vim /etc/httpd/conf/httpd.conf 
+   65  systemctl restart httpd
+   66  mysql -u root -p
+   67  ll
+   68  cat mxintech.com/wp-config.php 
+   69  mysql -u root -p
+   70  ll
+   71  ip a
+   72  cd
+   73  ll
+   74  tar -xvf wordpress_backup_db.sql.targz 
+   75  ll
+   76  mysql -h localhost -u root -p localclothes < wordpress_backup_db.sql
+   77  mysql -u root -p
+   78  mysql -h localhost -u root -p localclothes < wordpress_backup_db.sql
+   79  ll
+   80  tar -zxvf wordpress_site_backup.targz -C /var/www/html/
+   81  ll
+   82  cd /var/www/html/
+   83  ll
+   84  ll var/
+   85* ll var/www/html/localclothes.com/
+   86  mv var/www/html/localclothes.com/ .
+   87  ll
+   88  ll localclothes.com/
+   89  ll
+   90  rmdir var
+   91  rm -rf var/
+   92  ll
+   93  cd localclothes.com/
+   94  ll
+   95  vim wp-config.php
+   96  mysql -u root -p
+   97  ll
+   98  cd ..
+   99  ll
+  100  vim /etc/httpd/conf/httpd.conf 
+  101  ll
+  102  systemctl restart httpd
+  103  hitory
+  104  history
+  105  history > /root/multiple_sites_history.txt
